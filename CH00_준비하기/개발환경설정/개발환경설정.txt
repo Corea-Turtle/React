@@ -1,0 +1,23 @@
+[개발환경 설정]
+	Node.js 설치
+	: 자바스크립트 런타임 환경(jvm, jre참고)
+		- 브라우저 밖에서도 자바스크립트를 컴파일하고 실행할 수 있다.
+		- 클라이언트 언어뿐만 아니라 서버 언어로도 사용할 수 있다. 
+		https://nodejs.org/
+
+
+	 D2Coding 글꼴 설치 - Consolas 한글 가독성 추가 
+	 vscode 적용시 세팅 font family 들어가서 맨 앞에 D2Coding 써줌
+
+	extention 
+	: 
+	
+		html 
+
+		auto close tag
+	  auto reanme tag
+
+		indent rainbow
+
+
+
