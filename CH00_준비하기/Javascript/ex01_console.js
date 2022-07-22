@@ -5,3 +5,15 @@ console.log(a,b,d);
 
 console.log(typeof(d));
 console.log("값은 %d 입니다.",a);
+console.log('Hi~ bit221^^');
+
+[]
+//()
+{}//이런 블록들 자체가 자료구조이다.({}는 Collection - interface - HashMap이라고 할 수 있다.)
+
+// ES6
+var json = {id: 'bitcamp'};
+console.log('Hello my id is ' + json.id + ', nice to meet you!');
+console.log(`Hello my id is ${json.id}, nice to meet you!`);
+
+

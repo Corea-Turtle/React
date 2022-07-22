@@ -15,9 +15,15 @@
 		html 
 
 		auto close tag
-	  auto reanme tag
+	    auto rename tag
 
 		indent rainbow
+
+
+
+설계시 생각해야할 개념
+	-상속이냐 동물-개
+	-소유냐	  학교-학생 
 
 
 
