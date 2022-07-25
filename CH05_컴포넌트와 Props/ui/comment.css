@@ -1,0 +1,41 @@
+.comment{
+    margin:8px;
+    padding:8px;
+    display: flex;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+}
+
+.user-info{
+    display:flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.user-info-name{
+    font-weight: bold;
+    color : black;
+    line-height: 50px;
+}
+
+.comment-txt{
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color:white;
+    border-radius: 16px;
+}
+
+.container{
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comment-date{
+    margin-top: 5px;
+}
