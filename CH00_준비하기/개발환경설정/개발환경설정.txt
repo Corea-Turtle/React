@@ -11,19 +11,19 @@
 
 	extention 
 	: 
-	
-		html 
-
 		auto close tag
-	    auto rename tag
-
+	  auto rename tag
+		code runner
+		Css peak
+		HTML CSS Support
+		HTML Snippets
+		ES7+ React/Redux/React-Native snippets
 		indent rainbow
-
+		material icon
+		Live Server
+		React Native Tools
 
 
 설계시 생각해야할 개념
 	-상속이냐 동물-개
 	-소유냐	  학교-학생 
-
-
-

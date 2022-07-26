@@ -20,7 +20,7 @@ class Rectangle{
     //Method
     calcArea(){
         return this.height *this.width;
-    }
+	}
 }
 
 const p = new Rectangle(3,7);
