@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import UseSate01 from './hooks/1_useState/UseSate01';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <UseSate01/>
-  </React.StrictMode>
+  <>
+    <App/>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function

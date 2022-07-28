@@ -1,26 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import UseSate01 from './hooks/1_useState/UseSate01';
+import UseState01 from './hooks/1_useState/UseState01'; //import 뒤에 이름은 변수명으로 생각하면 좋다.
+import UseState02 from './hooks/1_useState/UseState02';
+import UseState03 from './hooks/1_useState/UseState03';
+import UseEffect01 from './hooks/2_useEffect/UseEffect01';
+import UseEffect02 from './hooks/2_useEffect/UseEffect02';
+import UseEffect03 from './hooks/2_useEffect/UseEffect03';
+import UseRef01 from './hooks/3_useRef/UseRef01';
+import UseRef02 from './hooks/3_useRef/UseRef02';
+import UseRef03 from './hooks/3_useRef/UseRef03';
+import UseMemo01 from './hooks/4_useMemo/UseMemo01';
+import UseCallBack01 from './hooks/5_useCallback/UseCallBack01';
+import UseCallback02 from './hooks/5_useCallback/UseCallback02';
+import UseCallBack03 from './hooks/5_useCallback/UseCallBack03';
 
 function App() {
   return (
-    <UseSate01/>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code><UseSate01/></code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+
+    <div className="App">
+      <header className="App-header">
+         <UseCallBack03/>
+      </header>
+    </div>
   );
 }
 
