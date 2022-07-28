@@ -13,13 +13,14 @@ import UseMemo01 from './hooks/4_useMemo/UseMemo01';
 import UseCallBack01 from './hooks/5_useCallback/UseCallBack01';
 import UseCallback02 from './hooks/5_useCallback/UseCallback02';
 import UseCallBack03 from './hooks/5_useCallback/UseCallBack03';
+import UseReducer02 from './hooks/6_useReducer/UseReducer02';
 
 function App() {
   return (
 
     <div className="App">
       <header className="App-header">
-         <UseCallBack03/>
+         <UseReducer02/>
       </header>
     </div>
   );
