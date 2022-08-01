@@ -24,7 +24,7 @@ function Timer() {
   
   
   return (
-    <div classname='container'>
+    <div className='container'>
       <span>현재 시각 : {time}</span>
     </div>
   )
