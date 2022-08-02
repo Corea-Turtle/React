@@ -11,13 +11,13 @@ function Slider() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="ham.gif" className="d-block w-100" alt="..." />
+            <img src="ham.gif" className="d-block mx-auto" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="catAndIcecream.gif" className="d-block w-100" alt="..." />
+            <img src="catAndIcecream.gif" className="d-block  mx-auto" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="capoo_flower.gif" className="d-block w-100" alt="..." />
+            <img src="capoo_flower.gif" className="d-block mx-auto"  mx-autoalt="..." />
           </div>
         </div>
         
