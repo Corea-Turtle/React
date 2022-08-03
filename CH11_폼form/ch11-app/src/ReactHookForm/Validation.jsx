@@ -1,21 +1,19 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { useRef } from "react";
-import ReactDOM from "react-dom";
-import { appendErrors, useForm } from "react-hook-form";
 
 import "./styles.css";
 
 function Validation() {
+  const { register, watch, handleSubmit, formState: { errors } } = useForm();
+  console.log(watch("email"));
 
-  const {register,watch, handleSubmit,formState:{errors}} = useForm();
-  console.log(watch("email"))
+  const password = useRef();
+  password.current = watch("password");
 
   const onSubmit = (data) => {
     console.log(data);
   };
-
-const password = useRef();
-password.current = watch("password");
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -23,34 +21,41 @@ password.current = watch("password");
       <input
         name="email"
         type="email"
-        {...register('email',{required:true,pattern:/^\S+@\S+$/i})}
+        {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
       />
-      {errors.email &&<p>This email field is required</p>}
+      {
+        errors.email && <p>This emalil filed is required</p>
+      }
       <label>Name</label>
       <input
         name="name"
         type="text"
-        {...register('name',{required:true,maxLength:10})}
+        {...register("name", { required: true, maxLength: 10 })}
       />
-      {errors.name && errors.name.type === "required" && <p>This field is required</p>}
-      
-      {errors.name && errors.name.type === "maxlength" && <p>Your Input exceeds field's maxLength : 10</p>}
+      {errors.name && errors.name.type === "required" && <p>This fiield is required</p>}
+      {errors.name && errors.name.type === "maxLength" && <p>Your input execeed maxLength</p>}
       <label>Password</label>
       <input
         name="password"
         type="password"
-        {...register('password',{required:true,minLength:8})}
+        {...register("password", { required: true, minLength: 8 })}
       />
-      {errors.name && errors.name.type === "required" && <p>This field is required</p>}
-      {errors.name && errors.name.type === "minLength" && <p>Your Input required field's minLength : 8</p>}
+      {errors.password && errors.password.type === "required" && <p>This fiield is required</p>}
+      {errors.password && errors.password.type === "minLength" && <p>Your input execeed minLength</p>}
       <label>Password confirm</label>
       <input
         name="password_confirm"
         type="password"
-        {...register('password',{required:true,pattern:/^\S+@\S+$/i})}
+        {...register("password_confirm", {
+          required: true, validate: (value) => value === password.current })}
       />
-      <input type="submit" value="submit"/>
+      {
+        errors.password_confirm && errors.password_confirm.type === "required" && <p>This fiield is required</p>
+      }
+      {errors.password_confirm && errors.password_confirm.type === "validate" && <p>The passwords do not macth</p>}
+      <input type="submit" value="SUBMIT" />
     </form>
   );
 }
+
 export default Validation;

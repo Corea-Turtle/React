@@ -12,9 +12,16 @@ const Wrapper = styled.div`
   border-radius: 50%;
 `;
 
+const SmartButton = styled.button`
+  color: ${props => props.dark? 'white':'dark'};
+  background : ${props => props.dark? 'black': 'white'};
+  border: 1px solid crimson;
+  padding: 3px;
+`;
+
 const WrapperButton = styled.button`
   background: brown;
-  border: none
+  border: none;
 `;
 
 
@@ -34,6 +41,7 @@ function MainPage() {
       나무를<br/>
       심는다.<br/>
     </WrapperButton>
+    <SmartButton dark>button</SmartButton>
     </>
   )
 }
