@@ -61,7 +61,7 @@ function App() {
           </div>
         </div>
         <div className='container'>
-          {/* <span style={{ color: '#999' }}>{`Total: ${posts.length}`}</span>
+          <span style={{ color: '#999' }}>{`Total: ${posts.length}`}</span>
           <hr />
           <table className='table text-light' style={{ fontSize: '1rem' }}>
             <thead>
@@ -86,7 +86,7 @@ function App() {
                 })
               }
             </tbody>
-          </table> */}
+          </table>
         </div>
       </header>
 
