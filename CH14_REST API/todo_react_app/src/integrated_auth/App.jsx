@@ -4,10 +4,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import AddTodo from "./AddTodo";
 import Todo from "./Todo";
-
 import axios from 'axios'
 import {API_BASE_URL} from './api-config'
 import NavBar from "./NavBar";
+import Map from "./Map";
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
     axios({
       method:'get',
       url:API_BASE_URL + '/todo',
+      headers: {Authorization : "Bearer " + localStorage.getItem("ACCESS_TOKEN")}
     }).then((response)=>{
       setItems(response.data.resList);
     });
@@ -30,6 +31,7 @@ function App() {
       method:'post',
       url:API_BASE_URL + '/todo',
       data: item,
+      headers: {Authorization : "Bearer " + localStorage.getItem("ACCESS_TOKEN")}
     }).then((response)=>{
       setItems(response.data.resList);
     });
@@ -40,7 +42,8 @@ function App() {
     axios({
       method:'put',
       url:API_BASE_URL + '/todo',
-      data:item
+      data:item,
+      headers: {Authorization : "Bearer " + localStorage.getItem("ACCESS_TOKEN")}
     }).then((response)=>{
       setItems(response.data.resList);
     });
@@ -51,7 +54,8 @@ function App() {
     axios({
       method:'delete',
       url:API_BASE_URL + '/todo',
-      data:item
+      data:item,
+      headers: {Authorization : "Bearer " + localStorage.getItem("ACCESS_TOKEN")}
     }).then(response=>setItems(response.data.resList));
   }
 
@@ -72,6 +76,7 @@ function App() {
           </List>
         </Paper>
       </Container>
+      <Map/>
     </div>
   );
 }

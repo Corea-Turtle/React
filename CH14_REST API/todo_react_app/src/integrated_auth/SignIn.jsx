@@ -3,8 +3,11 @@ import { Container } from '@mui/system'
 import axios from 'axios'
 import React from 'react'
 import { API_BASE_URL } from './api-config';
+import {Link, useNavigate} from 'react-router-dom'
 
-function SignIn() {
+function SignIn(props) {
+
+const navi = useNavigate();
 
   function signin(userDTO){
     axios({
@@ -12,7 +15,12 @@ function SignIn() {
       url: API_BASE_URL + "/auth/signin",
       data: userDTO
     }).then((response)=>{
-      alert(response.data.token);
+      //alert(response.data.token);
+      if(response.data.token){
+        localStorage.setItem("ACCESS_TOKEN",response.data.token);
+        //토큰이 존재하는 경우 TODO 화면으로 리다이렉트
+        navi("/");
+      }
     });
   }
 
@@ -66,6 +74,12 @@ function SignIn() {
             <Button type='submit' fullWidth variant='contained' color='primary'>
               Signin
             </Button>
+            
+            <Link to="/signup" variant='body2' style={{textDecoration:'none', color:'steelblue'}} >
+            <i className="fa-solid fa-bell" style={{ color: 'crimson', marginRight: '5px', marginTop:'20px' }}></i>
+          
+          <span>Already have an account? Please Sign up here</span>
+          </Link>
           </Grid>
         </Grid>
       </form>

@@ -5,6 +5,7 @@ import App from './App'
 import SignIn from './SignIn'
 import SignUp from './SignUp'
 import { Box } from '@mui/system'
+import Map from './Map'
 
 function AppRouter() {
   return (
@@ -14,6 +15,7 @@ function AppRouter() {
           <Route path='/' element={<App />}/>
           <Route path='/signin' element={<SignIn />}/>
           <Route path='/signup' element={<SignUp />}/>
+          <Route path='/map' element={<Map />}/>
         </Routes>
       </BrowserRouter>
       <Box mt={5}>
