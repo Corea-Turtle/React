@@ -1,15 +1,10 @@
 import React, { useRef } from 'react'
-import { RenderAfterNavermapsLoaded, NaverMap, Marker, loadNavermapsScript } from 'react-naver-maps';
+import { RenderAfterNavermapsLoaded, NaverMap, Marker,withNaverMaps} from 'react-naver-maps';
 
-const Map = () => {
-
-  const mapRef = useRef(null)
-  const clickHandler = ()=>{
-    
-  }
+function Map(props) { 
+  
 
   return (
-    <div>
       <RenderAfterNavermapsLoaded
         ncpClientId='nnonrapfvp'
         error={<p>Maps Load Error</p>}
@@ -17,7 +12,7 @@ const Map = () => {
       >
 
         <NaverMap
-          mapDivId={'maps'}
+          id={'map'+{id}}
           style={{
             width: '100%',
             height: '400px',
@@ -26,10 +21,23 @@ const Map = () => {
           defaultZoom={15}
           
         >
-
+          {props.address !== null
+          ? props.test.map((ele, idx) => {
+              return (
+                <Marker
+                  // icon={""}
+                  key={idx}
+                  position={{ lat: ele.lat, lng: ele.lng }}
+                  animation={2}
+                  onClick={() => {
+                    alert('hello');
+                  }}
+                />
+              );
+            })
+          : null}
         </NaverMap>
       </RenderAfterNavermapsLoaded>
-    </div>
   )
 }
 
